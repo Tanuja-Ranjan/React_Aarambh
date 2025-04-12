@@ -28,19 +28,15 @@ function App() {
   // let textToShow = textStateArr[0];
   // let setTextState = textStateArr[1];
 
-
   let [foodItems, setFoodItems] = useState([]);
 
   const onKeyDown = (event) => {
-    if(event.key === 'Enter'){
+    if (event.key === "Enter") {
       let newFoodItem = event.target.value;
       event.target.value = "";
       let newItems = [...foodItems, newFoodItem];
-      setFoodItems(newItems)
-
-      
+      setFoodItems(newItems);
     }
- 
   };
 
   return (
