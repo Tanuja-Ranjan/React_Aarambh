@@ -6,30 +6,13 @@ import { useState } from "react";
 import WelcomeMsg from "./components/WelcomeMsg";
 
 function App() {
-  const initialTodoItems = [
-    {
-      name: "Buy Milk",
-      dueDate: "4/10/2023",
-    },
-    {
-      name: "Go to College",
-      dueDate: "4/10/2023",
-    },
-    {
-      name: "Go for walk",
-      dueDate: "4/10/2023",
-    },
-  ];
-
-  const [todoItems, setTodoItems] = useState(initialTodoItems);
+  const [todoItems, setTodoItems] = useState([]);
 
   const handleNewItem = (itemName, itemDueDate) => {
-    const newTodoItems = [
-      ...todoItems,
-      ,
-      { name: itemName, dueDate: itemDueDate },
-    ];
-    setTodoItems(newTodoItems);
+    setTodoItems((currValue) => [
+      ...currValue,
+      {name: itemName,itemDueDate: itemDueDate},
+    ])
   };
 
   const handleDeleteItem = (todoItemName) => {

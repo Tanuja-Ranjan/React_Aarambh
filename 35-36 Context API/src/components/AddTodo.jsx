@@ -6,14 +6,13 @@ function AddTodo({ onNewItem }) {
   const dueDateElement = useRef();
 
   const handleAddButtonClicked = (event) => {
-     event.preventDefault();
-     const todoName = todoNameElement.current.value;
-      const dueDate = dueDateElement.current.value;
-    todoNameElement.current.value="";
-     dueDateElement.current.value = "";
-      
+    event.preventDefault();
+    const todoName = todoNameElement.current.value;
+    const dueDate = dueDateElement.current.value;
+    todoNameElement.current.value = "";
+    dueDateElement.current.value = "";
+
     onNewItem(todoName, dueDate);
-    
   };
 
   return (
@@ -24,13 +23,10 @@ function AddTodo({ onNewItem }) {
             type="text"
             ref={todoNameElement}
             placeholder="Enter Todo here"
-           
           />
         </div>
         <div className="col-4">
-          <input type="date"
-          ref={dueDateElement}
-  />
+          <input type="date" ref={dueDateElement} />
         </div>
         <div className="col-2">
           <button className="btn btn-success kg-button">
