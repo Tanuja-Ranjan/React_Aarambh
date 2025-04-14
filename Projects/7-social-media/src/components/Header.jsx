@@ -1,4 +1,3 @@
-
 const Header = () => {
   return (
     <header className="p-3 text-bg-dark">
@@ -71,7 +70,6 @@ const Header = () => {
       </div>
     </header>
   );
-
 };
 
 export default Header;
